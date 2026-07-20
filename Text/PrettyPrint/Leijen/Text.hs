@@ -782,7 +782,9 @@ instance Semigroup Doc where
 #endif
 instance Monoid Doc where
     mempty  = empty
+#if !MIN_VERSION_base (4,9,0)
     mappend = beside
+#endif
 
 -- | The data type @SimpleDoc@ represents rendered documents and is
 --   used by the display functions.
