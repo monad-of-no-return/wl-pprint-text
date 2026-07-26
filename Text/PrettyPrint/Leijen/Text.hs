@@ -782,7 +782,7 @@ instance Semigroup Doc where
 #endif
 instance Monoid Doc where
     mempty  = empty
-#if !MIN_VERSION_base (4,9,0)
+#if !MIN_VERSION_base (4,11,0)
     mappend = beside
 #endif
 
